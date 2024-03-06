@@ -2,7 +2,7 @@ import React from "react";
 
 const Contact = () => {
   return (
-    <div className="py-10 text-white">
+    <div data-aos="zoom-in" className="py-10 text-white">
       <div className="container">
         <div className="rounded-xl gap-6 bg-gray-800 p-5">
           <div className="grid md:grid-cols-2 sm:grid-cols-1 sm:place-items-center">

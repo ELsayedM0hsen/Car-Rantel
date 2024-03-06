@@ -29,12 +29,14 @@ const carList = [
     price: 100,
     image: car4,
     aosDelay: "0",
-  },  {
+  },
+  {
     name: "Merce UX",
     price: 100,
     image: car5,
     aosDelay: "500",
-  },  {
+  },
+  {
     name: "BMW 12",
     price: 100,
     image: car6,
@@ -45,19 +47,35 @@ const CarList = () => {
   return (
     <div>
       <div className="container">
-        <h1 className="text-3xl font-bold font-serif mb-3 sm:text-4xl">Lorem ipsum dolor</h1>
-        <p className="text-sm pb-10">
+        <h1
+          data-aos="fade-up"
+          className="text-3xl font-bold font-serif mb-3 sm:text-4xl"
+        >
+          Lorem ipsum dolor
+        </h1>
+        <p data-aos="fade-up" className="text-sm pb-10">
           sit amet consectetur adipisicing elit. Maxime corporis sed vero
           repellat laboriosam accusamus
         </p>
         <div>
           <div className="grid grid-cols-1 gap-16 md:grid-cols-3 sm:grid-cols-2">
-            {carList.map((car)=>(
+            {carList.map((car) => (
               <div className="relative group rounded-xl p-3 border-2 border-gray-300 space-y-3 hover:border-primary">
-                <div className="w-full h-[120px]">
-                  <img src={car.image} alt="car" className="w-full h-[120px] object-contain sm:translate-x-8 group-hover:sm:translate-x-16 duration-700" />
+                <div
+                  data-aos="fade-up"
+                  data-aos-delay={car.aosDelay}
+                  className="w-full h-[120px]"
+                >
+                  <img
+                    data-aos="zoom-in"
+                    src={car.image}
+                    alt="car"
+                    className="w-full h-[120px] object-contain sm:translate-x-8 group-hover:sm:translate-x-16 duration-700"
+                  />
                 </div>
-                <p className="text-xl font-semibold absolute top-0 left-3">12Km</p>
+                <p data-aos="fade-left" className="text-xl font-semibold absolute top-0 left-3">
+                  12Km
+                </p>
                 <div>
                   <h1 className="text-primary font-semibold">{car.name}</h1>
                   <div className="flex justify-between items-center text-xl font-semibold">

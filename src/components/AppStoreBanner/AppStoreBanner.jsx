@@ -17,13 +17,13 @@ const AppStoreBanner = () => {
       <div className="text-white py-10 rounded-xl sm:min-h-[400px] " style={bannerImg}>
         <div>
           <div className="space-y-6 max-w-xl p-3">
-            <h1 className="text-2xl font-semibold font-serif sm:text-4xl">Get Started with our app</h1>
-            <p className="text-center sm:px-20">
+            <h1 data-aos="fade-up" className="text-2xl font-semibold font-serif sm:text-4xl">Get Started with our app</h1>
+            <p data-aos="fade-up" className="text-center sm:px-20">
               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi
               neque nam sed quia!
             </p>
             <div
-              data-aos="fade-up"
+              data-aos="fade-right"
               className="flex flex-wrap items-center gap-4"
             >
               <a href="#">

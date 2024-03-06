@@ -9,6 +9,10 @@ import Contact from "./components/Contact/Contact";
 import Testimonial from "./components/Testimonial/Testimonial";
 import Footer from "./components/Footer/Footer";
 
+import AOS from "aos";
+import "aos/dist/aos.css";
+import Experience from "./components/Experience/Experience";
+
 const App = () => {
   const [theme, setTheme] = useState(
     localStorage.getItem("theme") ? localStorage.getItem("theme") : "light"
@@ -25,17 +29,28 @@ const App = () => {
     }
   }, [theme]);
 
+  useEffect(() => {
+    AOS.init({
+      offset: 100,
+      duration: 800,
+      easing: "ease-in-out-sine",
+      delay: 100,
+    });
+    AOS.refresh();
+  }, []);
+
   return (
     <div className="bg-white dark:bg-black dark:text-white text-black overflow-x-hidden">
       <Navbar theme={theme} setTheme={setTheme} />
-       <Hero theme={theme} />
+      <Hero theme={theme} />
       <About />
+      <Experience/>
       <Services />
       <CarList />
       <Testimonial />
       <AppStoreBanner />
       <Contact />
-      <Footer /> 
+      <Footer />
     </div>
   );
 };
